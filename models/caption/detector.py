@@ -79,6 +79,8 @@ def build_detector(config):
     )
     if os.path.exists(config.model.detector.checkpoint):
         checkpoint = torch.load(config.model.detector.checkpoint, map_location='cpu')
+        # print keys of checkpoint
+        print(checkpoint.keys())
         missing, unexpected = detector.load_state_dict(checkpoint['model'], strict=False)
         print(f"Loading weights for detector: missing: {len(missing)}, unexpected: {len(unexpected)}.")
     return detector

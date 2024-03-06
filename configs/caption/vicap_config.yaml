@@ -1,10 +1,10 @@
 exp:
   seed: 42
-  name: eval
+  name: vicap
   rank: 0
-  ngpus_per_node: 1
-  world_size: 1
-  checkpoint: ''
+  ngpus_per_node: 2
+  world_size: 2
+  checkpoint: '/home/quang/Downloads/grit_checkpoint_4ds.pth'
   eval: False
   resume: False
 
@@ -74,8 +74,8 @@ optimizer:
   weight_decay: 0.01
   beta_1: 0.9
   beta_2: 0.99
-  batch_size: 4
-  num_workers: 1
+  batch_size: 16
+  num_workers: 2
   freezing_xe_epochs: 0
   freezing_sc_epochs: 0
   finetune_xe_epochs: 10
