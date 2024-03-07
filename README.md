@@ -43,7 +43,7 @@ pip install torch torchvision --extra-index-url https://download.pytorch.org/whl
 * Install other requirements:
 ```shell
 pip install -r requirements.txt
-python -m spacy download en
+python -m spacy download en_core_web_sm
 ```
 * Install Deformable Attention:
 ```shell
